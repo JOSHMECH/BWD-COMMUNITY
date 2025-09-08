@@ -2,166 +2,180 @@
 
 // Mock data
 const challengesData = [
-    {
-        id: 1,
-        title: "Mobile App Redesign Challenge",
-        description: "Redesign a popular Nigerian mobile app interface with focus on user experience and local cultural elements.",
-        status: "Active",
-        deadline: "2024-09-15",
-        participants: 145,
-        prize: "₦150,000",
-        category: "UI/UX Design",
-        difficulty: "Intermediate"
-    },
-    {
-        id: 2,
-        title: "Nigerian Heritage Poster Series",
-        description: "Create a series of posters celebrating Nigerian cultural heritage and diversity across different regions.",
-        status: "Upcoming",
-        deadline: "2024-09-22",
-        participants: 0,
-        prize: "₦200,000",
-        category: "Graphic Design",
-        difficulty: "Beginner"
-    },
-    {
-        id: 3,
-        title: "Fintech Dashboard Innovation",
-        description: "Design an innovative dashboard for a Nigerian fintech startup focusing on cryptocurrency and digital payments.",
-        status: "Judging",
-        deadline: "2024-09-08",
-        participants: 89,
-        prize: "₦300,000",
-        category: "Product Design",
-        difficulty: "Advanced"
-    },
-    {
-        id: 4,
-        title: "Sustainable Lagos Branding",
-        description: "Create a comprehensive brand identity for a sustainable development initiative in Lagos State.",
-        status: "Completed",
-        deadline: "2024-09-01",
-        participants: 112,
-        prize: "₦175,000",
-        category: "Brand Design",
-        difficulty: "Intermediate"
-    }
+  {
+    id: 1,
+    title: "5-aside (ui/ux & developer) Challenge",
+    description:
+      "Redesign a popular Nigerian mobile app interface with focus on user experience and local cultural elements.",
+    status: "Upcoming", // changed
+    deadline: "2024-09-15",
+    participants: 145,
+    prize: "₦150,000",
+    category: "UI/UX Design/developer",
+    difficulty: "Intermediate",
+  },
+  {
+    id: 2,
+    title: "Graphic Design league",
+    description:
+      "Create a series of posters celebrating Nigerian cultural heritage and diversity across different regions.",
+    status: "Upcoming", // changed
+    deadline: "2024-09-22",
+    participants: 0,
+    prize: "₦200,000",
+    category: "Graphic Design",
+    difficulty: "Beginner",
+  },
+  {
+    id: 3,
+    title: "Fintech Dashboard Innovation",
+    description:
+      "Design an innovative dashboard for a Nigerian fintech startup focusing on cryptocurrency and digital payments.",
+    status: "Upcoming", // changed
+    deadline: "2024-09-08",
+    participants: 89,
+    prize: "₦300,000",
+    category: "Product Design/developer",
+    difficulty: "Advanced",
+  },
+  {
+    id: 4,
+    title: "Sustainable Lagos Branding",
+    description:
+      "Create a comprehensive brand identity for a sustainable development initiative in Lagos State.",
+    status: "Upcoming", // changed
+    deadline: "2024-09-01",
+    participants: 112,
+    prize: "₦175,000",
+    category: "Brand Design",
+    difficulty: "Intermediate",
+  },
 ];
 
 const leaderboardData = [
-    {
-        rank: 1,
-        name: "Adebayo Ogundimu",
-        title: "Senior Product Designer",
-        points: 2850,
-        wins: 8,
-        challenges: 15,
-        avatar: "AO"
-    },
-    {
-        rank: 2,
-        name: "Chioma Nwosu",
-        title: "UI/UX Designer",
-        points: 2720,
-        wins: 6,
-        challenges: 12,
-        avatar: "CN"
-    },
-    {
-        rank: 3,
-        name: "Ibrahim Musa",
-        title: "Visual Designer",
-        points: 2680,
-        wins: 7,
-        challenges: 14,
-        avatar: "IM"
-    },
-    {
-        rank: 4,
-        name: "Funmi Adeoye",
-        title: "Brand Designer",
-        points: 2540,
-        wins: 5,
-        challenges: 11,
-        avatar: "FA"
-    },
-    {
-        rank: 5,
-        name: "Samuel Okoro",
-        title: "Motion Designer",
-        points: 2480,
-        wins: 4,
-        challenges: 10,
-        avatar: "SO"
-    },
-    {
-        rank: 6,
-        name: "Aisha Mohammed",
-        title: "Product Designer",
-        points: 2350,
-        wins: 3,
-        challenges: 9,
-        avatar: "AM"
-    },
-    {
-        rank: 7,
-        name: "Emeka Okafor",
-        title: "Creative Director",
-        points: 2280,
-        wins: 4,
-        challenges: 8,
-        avatar: "EO"
-    },
-    {
-        rank: 8,
-        name: "Tola Adebisi",
-        title: "Graphic Designer",
-        points: 2180,
-        wins: 2,
-        challenges: 7,
-        avatar: "TA"
-    }
+  {
+    rank: 1,
+    name: "josh_d_developer",
+    title: "developer / creative designer",
+    points: 2850,
+    wins: 8,
+    challenges: 15,
+    avatar: "JDD",
+  },
+  {
+    rank: 2,
+    name: "isrealdkreator",
+    title: "UI/UX Designer",
+    points: 2720,
+    wins: 6,
+    challenges: 12,
+    avatar: "IS",
+  },
+  {
+    rank: 3,
+    name: "Design God",
+    title: "Brand Designer",
+    points: 2680,
+    wins: 7,
+    challenges: 14,
+    avatar: "GD",
+  },
+  {
+    rank: 4,
+    name: "Lawrence the plug (Shameless/Old man)",
+    title: "craetive designer / web designer",
+    points: 2540,
+    wins: 5,
+    challenges: 11,
+    avatar: "LA",
+  },
+  {
+    rank: 5,
+    name: "francel",
+    title: "Motion Designer",
+    points: 2480,
+    wins: 4,
+    challenges: 10,
+    avatar: "FR",
+  },
+  {
+    rank: 6,
+    name: "Enobong",
+    title: "Product Designer",
+    points: 2350,
+    wins: 3,
+    challenges: 9,
+    avatar: "EN",
+  },
+  {
+    rank: 7,
+    name: "fanzy",
+    title: "Creative Director",
+    points: 2280,
+    wins: 4,
+    challenges: 8,
+    avatar: "FA",
+  },
+  {
+    rank: 8,
+    name: "Steezii",
+    title: "Graphic Designer",
+    points: 2180,
+    wins: 2,
+    challenges: 7,
+    avatar: "ST",
+  },
 ];
 
 // DOM Elements
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const challengesGrid = document.getElementById('challengesGrid');
-const leaderboardTable = document.getElementById('leaderboardTable');
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const challengesGrid = document.getElementById("challengesGrid");
+const leaderboardTable = document.getElementById("leaderboardTable");
 const countdownElements = {
-    days: document.getElementById('days'),
-    hours: document.getElementById('hours'),
-    minutes: document.getElementById('minutes'),
-    seconds: document.getElementById('seconds')
+  days: document.getElementById("days"),
+  hours: document.getElementById("hours"),
+  minutes: document.getElementById("minutes"),
+  seconds: document.getElementById("seconds"),
 };
 
 // Mobile Menu Toggle
 if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
-    });
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+  });
 }
 
 // Countdown Timer
 function updateCountdown() {
-    const deadline = new Date();
-    deadline.setDate(deadline.getDate() + 7);
-    deadline.setHours(23, 59, 59, 999);
-    
-    const now = new Date().getTime();
-    const distance = deadline.getTime() - now;
-    
-    if (distance > 0) {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        if (countdownElements.days) countdownElements.days.textContent = days.toString().padStart(2, '0');
-        if (countdownElements.hours) countdownElements.hours.textContent = hours.toString().padStart(2, '0');
-        if (countdownElements.minutes) countdownElements.minutes.textContent = minutes.toString().padStart(2, '0');
-        if (countdownElements.seconds) countdownElements.seconds.textContent = seconds.toString().padStart(2, '0');
-    }
+  const deadline = new Date();
+  deadline.setDate(deadline.getDate() + 7);
+  deadline.setHours(23, 59, 59, 999);
+
+  const now = new Date().getTime();
+  const distance = deadline.getTime() - now;
+
+  if (distance > 0) {
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    if (countdownElements.days)
+      countdownElements.days.textContent = days.toString().padStart(2, "0");
+    if (countdownElements.hours)
+      countdownElements.hours.textContent = hours.toString().padStart(2, "0");
+    if (countdownElements.minutes)
+      countdownElements.minutes.textContent = minutes
+        .toString()
+        .padStart(2, "0");
+    if (countdownElements.seconds)
+      countdownElements.seconds.textContent = seconds
+        .toString()
+        .padStart(2, "0");
+  }
 }
 
 // Initialize countdown and update every second
@@ -170,45 +184,59 @@ setInterval(updateCountdown, 1000);
 
 // Helper Functions
 function getStatusBadgeClass(status) {
-    switch (status) {
-        case "Active": return "badge-primary";
-        case "Upcoming": return "badge-accent";
-        case "Judging": return "badge-secondary";
-        case "Completed": return "badge-muted";
-        default: return "badge-muted";
-    }
+  switch (status) {
+    case "upcoming":
+      return "badge-primary";
+    case "judging":
+      return "badge-accent";
+    case "upcoming":
+      return "badge-secondary";
+    case "upcoming":
+      return "badge-muted";
+    default:
+      return "badge-muted";
+  }
 }
 
 function getDifficultyIcon(difficulty) {
-    const iconClass = difficulty === "Beginner" ? "difficulty-beginner" : 
-                     difficulty === "Intermediate" ? "difficulty-intermediate" : 
-                     "difficulty-advanced";
-    
-    return `<svg class="${iconClass}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  const iconClass =
+    difficulty === "Beginner"
+      ? "difficulty-beginner"
+      : difficulty === "Intermediate"
+      ? "difficulty-intermediate"
+      : "difficulty-advanced";
+
+  return `<svg class="${iconClass}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
     </svg>`;
 }
 
 function formatDate(dateString) {
-    return new Date(dateString).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-    });
+  return new Date(dateString).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 }
 
 // Render Challenges
 function renderChallenges() {
-    if (!challengesGrid) return;
-    
-    challengesGrid.innerHTML = challengesData.map(challenge => `
+  if (!challengesGrid) return;
+
+  challengesGrid.innerHTML = challengesData
+    .map(
+      (challenge) => `
         <div class="challenge-card">
             <div class="challenge-header">
                 <div class="challenge-content">
                     <h3 class="challenge-title">${challenge.title}</h3>
-                    <p class="challenge-description">${challenge.description}</p>
+                    <p class="challenge-description">${
+                      challenge.description
+                    }</p>
                 </div>
-                <div class="badge ${getStatusBadgeClass(challenge.status)}">${challenge.status}</div>
+                <div class="badge ${getStatusBadgeClass(challenge.status)}">${
+        challenge.status
+      }</div>
             </div>
             
             <div class="challenge-badges">
@@ -260,24 +288,34 @@ function renderChallenges() {
                         </svg>
                         View Details
                     </button>
-                    ${challenge.status === "Active" ? `
+                    ${
+                      challenge.status === "Active"
+                        ? `
                         <button class="btn btn-primary">
                             Join Challenge
                         </button>
-                    ` : ''}
+                    `
+                        : ""
+                    }
                 </div>
             </div>
         </div>
-    `).join('');
+    `
+    )
+    .join("");
 }
 
 // Render Leaderboard
 function renderLeaderboard() {
-    if (!leaderboardTable) return;
-    
-    leaderboardTable.innerHTML = leaderboardData.map(designer => `
+  if (!leaderboardTable) return;
+
+  leaderboardTable.innerHTML = leaderboardData
+    .map(
+      (designer) => `
         <div class="leaderboard-item">
-            <div class="rank ${designer.rank <= 3 ? `rank-${designer.rank}` : ''}">${designer.rank}</div>
+            <div class="rank ${
+              designer.rank <= 3 ? `rank-${designer.rank}` : ""
+            }">${designer.rank}</div>
             <div class="designer-avatar">${designer.avatar}</div>
             <div class="designer-info">
                 <div class="designer-name">${designer.name}</div>
@@ -289,154 +327,158 @@ function renderLeaderboard() {
                 <span>${designer.challenges} challenges</span>
             </div>
         </div>
-    `).join('');
+    `
+    )
+    .join("");
 }
 
 // Tab functionality for leaderboard
 function initializeTabs() {
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all tabs
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked tab
-            button.classList.add('active');
-            
-            // Here you could implement different data loading based on the tab
-            // For now, we'll just re-render the same data
-            renderLeaderboard();
-        });
+  const tabButtons = document.querySelectorAll(".tab-btn");
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove active class from all tabs
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      // Add active class to clicked tab
+      button.classList.add("active");
+
+      // Here you could implement different data loading based on the tab
+      // For now, we'll just re-render the same data
+      renderLeaderboard();
     });
+  });
 }
 
 // Smooth scrolling for navigation links
 function initializeSmoothScrolling() {
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                
-                // Close mobile menu if open
-                if (mobileMenu && mobileMenu.classList.contains('open')) {
-                    mobileMenu.classList.remove('open');
-                }
-            }
+  const navLinks = document.querySelectorAll('a[href^="#"]');
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
         });
+
+        // Close mobile menu if open
+        if (mobileMenu && mobileMenu.classList.contains("open")) {
+          mobileMenu.classList.remove("open");
+        }
+      }
     });
+  });
 }
 
 // Newsletter form handling
 function initializeNewsletter() {
-    const newsletterForm = document.querySelector('.newsletter-form');
-    const newsletterInput = document.querySelector('.newsletter-input');
-    const subscribeBtn = newsletterForm?.querySelector('.btn-accent');
-    
-    if (subscribeBtn) {
-        subscribeBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const email = newsletterInput?.value;
-            
-            if (email && isValidEmail(email)) {
-                alert('Thank you for subscribing! You\'ll receive updates about new challenges.');
-                newsletterInput.value = '';
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        });
-    }
+  const newsletterForm = document.querySelector(".newsletter-form");
+  const newsletterInput = document.querySelector(".newsletter-input");
+  const subscribeBtn = newsletterForm?.querySelector(".btn-accent");
+
+  if (subscribeBtn) {
+    subscribeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const email = newsletterInput?.value;
+
+      if (email && isValidEmail(email)) {
+        alert(
+          "Thank you for subscribing! You'll receive updates about new challenges."
+        );
+        newsletterInput.value = "";
+      } else {
+        alert("Please enter a valid email address.");
+      }
+    });
+  }
 }
 
 function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 }
 
 // Add some interactive animations
 function addInteractiveAnimations() {
-    // Add hover effects to challenge cards
-    const challengeCards = document.querySelectorAll('.challenge-card');
-    challengeCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-4px)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-        });
+  // Add hover effects to challenge cards
+  const challengeCards = document.querySelectorAll(".challenge-card");
+  challengeCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transform = "translateY(-4px)";
     });
-    
-    // Add click animation to buttons
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            button.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                button.style.transform = 'scale(1)';
-            }, 150);
-        });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "translateY(0)";
     });
+  });
+
+  // Add click animation to buttons
+  const buttons = document.querySelectorAll(".btn");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      button.style.transform = "scale(0.95)";
+      setTimeout(() => {
+        button.style.transform = "scale(1)";
+      }, 150);
+    });
+  });
 }
 
 // Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    renderChallenges();
-    renderLeaderboard();
-    initializeTabs();
-    initializeSmoothScrolling();
-    initializeNewsletter();
-    
-    // Add interactive animations after a short delay to ensure all elements are rendered
-    setTimeout(addInteractiveAnimations, 100);
+document.addEventListener("DOMContentLoaded", () => {
+  renderChallenges();
+  renderLeaderboard();
+  initializeTabs();
+  initializeSmoothScrolling();
+  initializeNewsletter();
+
+  // Add interactive animations after a short delay to ensure all elements are rendered
+  setTimeout(addInteractiveAnimations, 100);
 });
 
 // Handle window resize for responsive behavior
-window.addEventListener('resize', () => {
-    // Close mobile menu on resize to larger screen
-    if (window.innerWidth >= 1024 && mobileMenu) {
-        mobileMenu.classList.remove('open');
-    }
+window.addEventListener("resize", () => {
+  // Close mobile menu on resize to larger screen
+  if (window.innerWidth >= 1024 && mobileMenu) {
+    mobileMenu.classList.remove("open");
+  }
 });
 
 // Add some performance optimizations
 // Throttle scroll events
 let scrollTimeout;
-window.addEventListener('scroll', () => {
-    if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
+window.addEventListener("scroll", () => {
+  if (scrollTimeout) {
+    clearTimeout(scrollTimeout);
+  }
+
+  scrollTimeout = setTimeout(() => {
+    // Add scroll-based animations here if needed
+    const scrollY = window.scrollY;
+    const navbar = document.querySelector(".nav");
+
+    if (navbar) {
+      if (scrollY > 100) {
+        navbar.style.background = "hsla(0, 0%, 98%, 0.98)";
+        navbar.style.backdropFilter = "blur(12px)";
+      } else {
+        navbar.style.background = "hsla(0, 0%, 98%, 0.95)";
+        navbar.style.backdropFilter = "blur(8px)";
+      }
     }
-    
-    scrollTimeout = setTimeout(() => {
-        // Add scroll-based animations here if needed
-        const scrollY = window.scrollY;
-        const navbar = document.querySelector('.nav');
-        
-        if (navbar) {
-            if (scrollY > 100) {
-                navbar.style.background = 'hsla(0, 0%, 98%, 0.98)';
-                navbar.style.backdropFilter = 'blur(12px)';
-            } else {
-                navbar.style.background = 'hsla(0, 0%, 98%, 0.95)';
-                navbar.style.backdropFilter = 'blur(8px)';
-            }
-        }
-    }, 10);
+  }, 10);
 });
 
 // Export functions for potential future use
 window.NigerianDesignLeague = {
-    updateCountdown,
-    renderChallenges,
-    renderLeaderboard,
-    challengesData,
-    leaderboardData
+  updateCountdown,
+  renderChallenges,
+  renderLeaderboard,
+  challengesData,
+  leaderboardData,
 };
