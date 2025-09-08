@@ -1,25 +1,319 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigerian Design League - Competition Hub</title>
-    <meta name="description" content="Join Nigeria's premier design competition platform. Participate in challenges, showcase your creativity, and compete with talented designers across Nigeria for amazing prizes." />
-    <meta name="author" content="Nigerian Design League" />
-    <meta name="keywords" content="design competition, Nigerian designers, graphic design, UI UX, challenges, portfolio, creative contest" />
+    <meta name="description" content="Join Nigeria's premier design competition platform. Participate in challenges, showcase your creativity, and compete with talented designers across Nigeria for amazing prizes.">
+    <meta name="author" content="Nigerian Design League">
+    <meta name="keywords" content="design competition, Nigerian designers, graphic design, UI UX, challenges, portfolio, creative contest">
 
-    <meta property="og:title" content="Nigerian Design League - Competition Hub" />
-    <meta property="og:description" content="Where creativity meets competition. Join Nigeria's premier design challenge platform and showcase your talent to the world." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:title" content="Nigerian Design League - Competition Hub">
+    <meta property="og:description" content="Where creativity meets competition. Join Nigeria's premier design challenge platform and showcase your talent to the world.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lovable_dev">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="public/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <div class="nav-logo">
+                        <svg class="trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                            <path d="M4 22h16"/>
+                            <path d="M10 14.66V17c0 .55.47.98.97 1.21C12.25 18.75 14 20 16 20s3.75-1.25 5.03-1.79c.5-.23.97-.66.97-1.21v-2.34"/>
+                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                        </svg>
+                    </div>
+                    <div class="nav-text">
+                        <h2 class="nav-title">Nigerian Design League</h2>
+                        <p class="nav-subtitle">Competition Hub</p>
+                    </div>
+                </div>
+
+                <div class="nav-links desktop-only">
+                    <a href="#challenges" class="nav-link">Challenges</a>
+                    <a href="#leaderboard" class="nav-link">Leaderboard</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+
+                <div class="nav-actions desktop-only">
+                    <button class="btn btn-outline">Login</button>
+                    <button class="btn btn-primary">Register</button>
+                </div>
+
+                <button class="mobile-menu-btn mobile-only" id="mobileMenuBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" x2="20" y1="12" y2="12"/>
+                        <line x1="4" x2="20" y1="6" y2="6"/>
+                        <line x1="4" x2="20" y1="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <a href="#challenges" class="mobile-nav-link">Challenges</a>
+                    <a href="#leaderboard" class="mobile-nav-link">Leaderboard</a>
+                    <a href="#about" class="mobile-nav-link">About</a>
+                    <a href="#contact" class="mobile-nav-link">Contact</a>
+                    <div class="mobile-actions">
+                        <button class="btn btn-outline btn-full">Login</button>
+                        <button class="btn btn-primary btn-full">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Nigerian Design
+                    <span class="hero-title-accent">League</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Where creativity meets competition. Join Nigeria's premier design challenge platform 
+                    and showcase your talent to the world.
+                </p>
+
+                <div class="countdown-section">
+                    <h3 class="countdown-title">Next Challenge Deadline</h3>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="days">00</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="hours">00</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="minutes">00</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="seconds">00</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 2v4"/>
+                            <path d="M16 2v4"/>
+                            <rect width="18" height="18" x="3" y="4" rx="2"/>
+                            <path d="M3 10h18"/>
+                        </svg>
+                        View Current Challenge
+                    </button>
+                    <button class="btn btn-outline btn-large btn-light">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                            <path d="M4 22h16"/>
+                            <path d="M10 14.66V17c0 .55.47.98.97 1.21C12.25 18.75 14 20 16 20s3.75-1.25 5.03-1.79c.5-.23.97-.66.97-1.21v-2.34"/>
+                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                        </svg>
+                        View Leaderboard
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <div class="stat-value">1,200+</div>
+                        <div class="stat-label">Active Designers</div>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                        <div class="stat-value">48</div>
+                        <div class="stat-label">Challenges Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                            <path d="M4 22h16"/>
+                            <path d="M10 14.66V17c0 .55.47.98.97 1.21C12.25 18.75 14 20 16 20s3.75-1.25 5.03-1.79c.5-.23.97-.66.97-1.21v-2.34"/>
+                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                        </svg>
+                        <div class="stat-value">₦2.5M</div>
+                        <div class="stat-label">Total Prize Pool</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="challenges" id="challenges">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Design Challenges</h2>
+                <p class="section-description">
+                    Take on exciting design challenges, showcase your creativity, and compete with 
+                    talented designers across Nigeria for amazing prizes.
+                </p>
+            </div>
+
+            <div class="challenges-grid" id="challengesGrid">
+                <!-- Challenges will be populated by JavaScript -->
+            </div>
+
+            <div class="section-footer">
+                <button class="btn btn-outline btn-large">View All Challenges</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section class="leaderboard" id="leaderboard">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Top Designers</h2>
+                <p class="section-description">
+                    Celebrating our most talented and consistent performers. See where you rank among 
+                    Nigeria's finest designers.
+                </p>
+            </div>
+
+            <div class="leaderboard-content">
+                <div class="leaderboard-tabs">
+                    <button class="tab-btn active" data-tab="overall">Overall Ranking</button>
+                    <button class="tab-btn" data-tab="monthly">This Month</button>
+                    <button class="tab-btn" data-tab="challenges">Recent Challenge</button>
+                </div>
+
+                <div class="leaderboard-table" id="leaderboardTable">
+                    <!-- Leaderboard will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                <path d="M4 22h16"/>
+                                <path d="M10 14.66V17c0 .55.47.98.97 1.21C12.25 18.75 14 20 16 20s3.75-1.25 5.03-1.79c.5-.23.97-.66.97-1.21v-2.34"/>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                            </svg>
+                        </div>
+                        <div class="footer-logo-text">
+                            <h3 class="footer-title">Nigerian Design League</h3>
+                            <p class="footer-subtitle">Competition Hub</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Empowering Nigerian designers through competitive challenges and community building. 
+                        Join us in celebrating and advancing design excellence across Nigeria.
+                    </p>
+                    <div class="footer-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Lagos, Nigeria</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-section-title">Quick Links</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#challenges" class="footer-link">Current Challenges</a></li>
+                        <li><a href="#leaderboard" class="footer-link">Leaderboard</a></li>
+                        <li><a href="#judges" class="footer-link">Our Judges</a></li>
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#faq" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-section-title">Stay Updated</h4>
+                    <p class="footer-newsletter-text">
+                        Get notified about new challenges and winners.
+                    </p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button class="btn btn-accent">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                <path d="M22 7l-10 5L2 7"/>
+                            </svg>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        © 2024 Nigerian Design League. All rights reserved.
+                    </p>
+                    
+                    <div class="footer-social">
+                        <button class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                            </svg>
+                        </button>
+                        <button class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                            </svg>
+                        </button>
+                        <button class="social-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect width="4" height="12" x="2" y="9"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
