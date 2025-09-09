@@ -64,7 +64,7 @@ const leaderboardData = [
   },
   {
     rank: 2,
-    name: "isrealdkreator",
+    name: "isreal the UI/UX Oracle",
     title: "UI/UX Designer",
     points: 2720,
     wins: 6,
@@ -82,7 +82,7 @@ const leaderboardData = [
   },
   {
     rank: 4,
-    name: "Lawrence the plug (Shameless/Old man)",
+    name: "Lawrence the plug",
     title: "craetive designer / web designer",
     points: 2540,
     wins: 5,
@@ -124,6 +124,24 @@ const leaderboardData = [
     wins: 2,
     challenges: 7,
     avatar: "ST",
+  },
+  {
+    rank: 9,
+    name: "Holly",
+    title: "Web Developer",
+    points: 2100,
+    wins: 2,
+    challenges: 6,
+    avatar: "AD",
+  },
+  {
+    rank: 10,
+    name: "Asap",
+    title: "Animator",
+    points: 2050,
+    wins: 1,
+    challenges: 5,
+    avatar: "TS",
   },
 ];
 
@@ -281,23 +299,55 @@ function renderChallenges() {
                 </div>
                 
                 <div class="challenge-actions">
-                    <button class="btn btn-outline">
-                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        View Details
-                    </button>
-                    ${
-                      challenge.status === "Active"
-                        ? `
-                        <button class="btn btn-primary">
-                            Join Challenge
-                        </button>
-                    `
-                        : ""
-                    }
-                </div>
+  ${
+    // Use an external link for each challenge, based on its id or title
+    (() => {
+      // Map challenge id or title to a specific external link
+      const detailsLinks = {
+        1: "upcoming.html", // 5-aside (ui/ux & developer) Challenge
+        2: "https://forms.gle/xRR1v6uG6SAkTy7W9", // Graphic Design league
+        3: "upcoming.html", // Fintech Dashboard Innovation
+        4: "upcoming.html", // Sustainable Lagos Branding
+      };
+      const link = detailsLinks[challenge.id];
+      if (link) {
+        return `
+        <a
+          class="btn btn-outline"
+          href="${link}"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          View Details
+        </a>
+        `;
+      } else {
+        return `
+        <button class="btn btn-outline">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          View Details
+        </button>
+        `;
+      }
+    })()
+  }
+  ${
+    challenge.status === "Active"
+      ? `
+      <button class="btn btn-primary">
+        Join Challenge
+      </button>
+    `
+      : ""
+  }
+</div>
             </div>
         </div>
     `

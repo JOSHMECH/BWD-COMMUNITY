@@ -59,9 +59,9 @@
               target="_blank"
               rel="noopener"
               class="btn btn-outline"
-              >Join the waitlist</a
+              >Join the Waitlist</a
             >
-            <button class="btn btn-primary">Register</button>
+            <!-- <button class="btn btn-primary">Register</button> -->
           </div>
 
           <button class="mobile-menu-btn mobile-only" id="mobileMenuBtn">
@@ -87,8 +87,13 @@
             <a href="#about" class="mobile-nav-link">About</a>
             <a href="#contact" class="mobile-nav-link">Contact</a>
             <div class="mobile-actions">
-              <button class="btn btn-outline btn-full">Login</button>
-              <button class="btn btn-primary btn-full">Register</button>
+              <a
+                href="https://forms.gle/xRR1v6uG6SAkTy7W9"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-outline btn-full"
+                >Join the Waitlist</a>
+              <!-- <button class="btn btn-primary btn-full">Register</button> -->
             </div>
           </div>
         </div>
@@ -157,26 +162,31 @@
               </svg>
               Join the waitlist
             </a>
-            <button class="btn btn-outline btn-large btn-light">
+            <button class="btn btn-outline btn-large btn-light" id="viewLeaderboardBtn">
               <svg
-                class="btn-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+              class="btn-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               >
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-                <path d="M4 22h16" />
-                <path
-                  d="M10 14.66V17c0 .55.47.98.97 1.21C12.25 18.75 14 20 16 20s3.75-1.25 5.03-1.79c.5-.23.97-.66.97-1.21v-2.34"
-                />
-                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+              <path d="M4 22h16" />
+              <path
+                d="M10 14.66V17c0 .55.47.98.97 1.21C12.25 18.75 14 20 16 20s3.75-1.25 5.03-1.79c.5-.23.97-.66.97-1.21v-2.34"
+              />
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
               </svg>
               View Leaderboard
             </button>
+            <script>
+              document.getElementById('viewLeaderboardBtn').addEventListener('click', function() {
+              document.getElementById('leaderboard').scrollIntoView({ behavior: 'smooth' });
+              });
+            </script>
           </div>
 
           <div class="hero-stats">
@@ -245,7 +255,7 @@
     <section class="challenges" id="challenges">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">creative Challenges</h2>
+          <h2 class="section-title">Creative Challenges</h2>
           <p class="section-description">
             Take on exciting creative challenges, showcase your creativity, and
             compete with talented designers across BWD for amazing prizes.
