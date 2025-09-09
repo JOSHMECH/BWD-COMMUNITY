@@ -132,7 +132,7 @@ const leaderboardData = [
     points: 2100,
     wins: 2,
     challenges: 6,
-    avatar: "AD",
+    avatar: "HO",
   },
   {
     rank: 10,
@@ -141,7 +141,7 @@ const leaderboardData = [
     points: 2050,
     wins: 1,
     challenges: 5,
-    avatar: "TS",
+    avatar: "AS",
   },
 ];
 
