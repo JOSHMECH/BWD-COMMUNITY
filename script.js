@@ -4,7 +4,7 @@
 const challengesData = [
   {
     id: 1,
-    title: "5-aside (ui/ux & developer) Challenge",
+    title: "5-aside (UI/UX & Developer) Challenge",
     description:
       "Redesign a popular Nigerian mobile app interface with focus on user experience and local cultural elements.",
     status: "Upcoming", // changed
@@ -55,7 +55,7 @@ const challengesData = [
 const leaderboardData = [
   {
     rank: 1,
-    name: "josh_d_developer",
+    name: "Josh_d_developer",
     title: "developer / creative designer",
     points: 2850,
     wins: 8,
@@ -64,7 +64,7 @@ const leaderboardData = [
   },
   {
     rank: 2,
-    name: "isreal the UI/UX Oracle",
+    name: "Isreal the UI/UX Oracle",
     title: "UI/UX Designer",
     points: 2720,
     wins: 6,
@@ -91,7 +91,7 @@ const leaderboardData = [
   },
   {
     rank: 5,
-    name: "francel",
+    name: "Francel",
     title: "Motion Designer",
     points: 2480,
     wins: 4,
@@ -109,7 +109,7 @@ const leaderboardData = [
   },
   {
     rank: 7,
-    name: "fanzy",
+    name: "Fanzy",
     title: "Creative Director",
     points: 2280,
     wins: 4,
