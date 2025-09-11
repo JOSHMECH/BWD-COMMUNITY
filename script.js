@@ -61,6 +61,41 @@ const leaderboardData = [
     wins: 8,
     challenges: 15,
     avatar: "JDD",
+    image: "lp/JOSH.jpg",
+    description:
+      "Passionate about creating beautiful and functional web experiences. I love coding, design, and exploring new technologies.",
+    tags: ["HTML/CSS", "JavaScript", "React", "Adobe", "Corel Draw"],
+    works: [
+      {
+        title: "E-Commerce Website",
+        desc: "A fully responsive e-commerce platform with product filtering, cart functionality, and secure checkout process.",
+        image:
+          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "Analytics Dashboard",
+        desc: "An interactive dashboard with data visualization, user management, and real-time analytics reporting.",
+        image:
+          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+      },
+    ],
+    achievements: [
+      {
+        icon: "fas fa-trophy",
+        title: "Best Creative Award 2023",
+        desc: "Received recognition for outstanding Creative design in the annual design awards.",
+      },
+      {
+        icon: "fas fa-medal",
+        title: "Top Contributor",
+        desc: "Recognized as top contributor to open source projects in the React ecosystem.",
+      },
+      {
+        icon: "fas fa-award",
+        title: "Performance Excellence",
+        desc: "Awarded for delivering projects with exceptional performance and accessibility scores.",
+      },
+    ],
   },
   {
     rank: 2,
@@ -70,6 +105,36 @@ const leaderboardData = [
     wins: 6,
     challenges: 12,
     avatar: "IS",
+    image: "lp/ISREAL.png",
+    description:
+      "UI/UX Designer with a knack for intuitive interfaces and delightful user journeys. Always seeking to blend usability with beauty.",
+    tags: ["Figma", "Wireframing", "Prototyping", "User Research", "Adobe XD"],
+    works: [
+      {
+        title: "Mobile Banking App Redesign",
+        desc: "Redesigned a banking app to improve onboarding and daily usability for thousands of users.",
+        image:
+          "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "Travel Booking Platform",
+        desc: "Created a seamless booking flow and engaging visuals for a travel startup.",
+        image:
+          "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+      },
+    ],
+    achievements: [
+      {
+        icon: "fas fa-star",
+        title: "UX Star 2024",
+        desc: "Awarded for best user experience design in a national competition.",
+      },
+      {
+        icon: "fas fa-users",
+        title: "Community Mentor",
+        desc: "Mentored over 50 aspiring designers in the BWD community.",
+      },
+    ],
   },
   {
     rank: 3,
@@ -79,6 +144,36 @@ const leaderboardData = [
     wins: 7,
     challenges: 14,
     avatar: "GD",
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    description:
+      "Brand Designer passionate about crafting memorable identities and visual stories for businesses and startups.",
+    tags: ["Branding", "Logo Design", "Illustrator", "Photoshop", "Identity"],
+    works: [
+      {
+        title: "Luxury Hotel Branding",
+        desc: "Developed a premium brand identity for a new luxury hotel chain.",
+        image:
+          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "Startup Logo Collection",
+        desc: "Created over 20 unique logos for tech and lifestyle startups.",
+        image:
+          "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
+      },
+    ],
+    achievements: [
+      {
+        icon: "fas fa-certificate",
+        title: "Branding Excellence",
+        desc: "Recognized for outstanding branding work in the 2024 Creative Awards.",
+      },
+      {
+        icon: "fas fa-paint-brush",
+        title: "Logo Master",
+        desc: "Designed 100+ logos for clients across various industries.",
+      },
+    ],
   },
   {
     rank: 4,
@@ -88,6 +183,36 @@ const leaderboardData = [
     wins: 5,
     challenges: 11,
     avatar: "LA",
+    image: "lp/LAWRENCE.jpg",
+    description:
+      "Creative and web designer blending aesthetics with functionality. Loves building beautiful, responsive websites.",
+    tags: ["Web Design", "HTML", "CSS", "JavaScript", "Creativity"],
+    works: [
+      {
+        title: "Portfolio Website",
+        desc: "Designed and developed a personal portfolio site for a photographer.",
+        image:
+          "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "NGO Landing Page",
+        desc: "Created a compelling landing page for a non-profit organization.",
+        image:
+          "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+      },
+    ],
+    achievements: [
+      {
+        icon: "fas fa-globe",
+        title: "Web Wizard",
+        desc: "Built 20+ websites for clients in different sectors.",
+      },
+      {
+        icon: "fas fa-lightbulb",
+        title: "Creative Spark",
+        desc: "Awarded for innovative design solutions in web projects.",
+      },
+    ],
   },
   {
     rank: 5,
@@ -97,6 +222,36 @@ const leaderboardData = [
     wins: 4,
     challenges: 10,
     avatar: "FR",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    description:
+      "Motion Designer bringing stories to life with animation and dynamic visuals. Enthusiastic about kinetic typography and explainer videos.",
+    tags: ["After Effects", "Cinema 4D", "Animation", "Storyboarding"],
+    works: [
+      {
+        title: "Brand Animation Reel",
+        desc: "Produced a motion graphics reel for a fintech brand campaign.",
+        image:
+          "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "Explainer Video",
+        desc: "Animated an explainer video for a health tech startup.",
+        image:
+          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      },
+    ],
+    achievements: [
+      {
+        icon: "fas fa-film",
+        title: "Animation Guru",
+        desc: "Recognized for outstanding motion graphics in 2024.",
+      },
+      {
+        icon: "fas fa-bolt",
+        title: "Fast Frame Award",
+        desc: "Awarded for quick turnaround on high-quality animation projects.",
+      },
+    ],
   },
   {
     rank: 6,
@@ -106,6 +261,36 @@ const leaderboardData = [
     wins: 3,
     challenges: 9,
     avatar: "EN",
+    image: "https://randomuser.me/api/portraits/men/23.jpg",
+    description:
+      "Product Designer focused on solving real-world problems with user-centric digital products and delightful experiences.",
+    tags: ["Product Design", "User Flows", "Wireframes", "Prototyping"],
+    works: [
+      {
+        title: "Fintech App UI",
+        desc: "Designed the user interface for a digital payments app.",
+        image:
+          "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "SaaS Dashboard",
+        desc: "Created a dashboard for a SaaS analytics platform.",
+        image:
+          "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
+      },
+    ],
+    achievements: [
+      {
+        icon: "fas fa-cube",
+        title: "Product Pioneer",
+        desc: "Recognized for innovative product design in 2024.",
+      },
+      {
+        icon: "fas fa-users",
+        title: "Team Player",
+        desc: "Collaborated with cross-functional teams on 10+ projects.",
+      },
+    ],
   },
   {
     rank: 7,
@@ -115,6 +300,36 @@ const leaderboardData = [
     wins: 4,
     challenges: 8,
     avatar: "FA",
+    image: "https://randomuser.me/api/portraits/men/77.jpg",
+    description:
+      "Creative Director leading teams to deliver impactful campaigns and innovative design solutions for brands.",
+    tags: ["Leadership", "Art Direction", "Brand Strategy", "Campaigns"],
+    works: [
+      {
+        title: "Brand Campaign Launch",
+        desc: "Directed a multi-channel campaign for a beverage brand.",
+        image:
+          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "Creative Workshop",
+        desc: "Organized and led a creative workshop for young designers.",
+        image:
+          "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80",
+      },
+    ],
+    achievements: [
+      {
+        icon: "fas fa-users-cog",
+        title: "Leadership Award",
+        desc: "Honored for outstanding leadership in creative projects.",
+      },
+      {
+        icon: "fas fa-lightbulb",
+        title: "Innovation Champion",
+        desc: "Recognized for driving innovation in brand campaigns.",
+      },
+    ],
   },
   {
     rank: 8,
@@ -124,6 +339,36 @@ const leaderboardData = [
     wins: 2,
     challenges: 7,
     avatar: "ST",
+    image: "https://randomuser.me/api/portraits/men/81.jpg",
+    description:
+      "Graphic Designer skilled in visual storytelling, poster design, and digital illustration for brands and events.",
+    tags: ["Photoshop", "Illustrator", "Poster Design", "Digital Art"],
+    works: [
+      {
+        title: "Event Poster Series",
+        desc: "Designed a series of posters for a national music festival.",
+        image:
+          "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "Brand Illustration",
+        desc: "Created digital illustrations for a tech startup's branding.",
+        image:
+          "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+      },
+    ],
+    achievements: [
+      {
+        icon: "fas fa-palette",
+        title: "Design Excellence",
+        desc: "Awarded for creative poster designs in 2024.",
+      },
+      {
+        icon: "fas fa-brush",
+        title: "Illustration Pro",
+        desc: "Recognized for outstanding digital illustrations.",
+      },
+    ],
   },
   {
     rank: 9,
@@ -133,6 +378,36 @@ const leaderboardData = [
     wins: 2,
     challenges: 6,
     avatar: "HO",
+    image: "https://randomuser.me/api/portraits/women/12.jpg",
+    description:
+      "Web Developer specializing in building fast, accessible, and responsive websites for businesses and individuals.",
+    tags: ["HTML", "CSS", "JavaScript", "Accessibility", "Performance"],
+    works: [
+      {
+        title: "E-commerce Platform",
+        desc: "Developed a scalable e-commerce site with secure payments.",
+        image:
+          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "Portfolio Builder",
+        desc: "Built a customizable portfolio builder for freelancers.",
+        image:
+          "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80",
+      },
+    ],
+    achievements: [
+      {
+        icon: "fas fa-code",
+        title: "Web Dev Star",
+        desc: "Recognized for outstanding web development projects.",
+      },
+      {
+        icon: "fas fa-rocket",
+        title: "Performance Guru",
+        desc: "Awarded for building high-performance web apps.",
+      },
+    ],
   },
   {
     rank: 10,
@@ -142,6 +417,36 @@ const leaderboardData = [
     wins: 1,
     challenges: 5,
     avatar: "AS",
+    image: "https://randomuser.me/api/portraits/men/99.jpg",
+    description:
+      "Animator with a flair for storytelling through motion. Experienced in 2D/3D animation and character rigging.",
+    tags: ["2D Animation", "3D Animation", "Rigging", "After Effects"],
+    works: [
+      {
+        title: "Short Film Animation",
+        desc: "Animated a short film for a local film festival.",
+        image:
+          "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "Character Animation Reel",
+        desc: "Compiled a reel of character animations for various projects.",
+        image:
+          "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+      },
+    ],
+    achievements: [
+      {
+        icon: "fas fa-film",
+        title: "Animation Award",
+        desc: "Won best animation at the 2024 Lagos Animation Fest.",
+      },
+      {
+        icon: "fas fa-star",
+        title: "Creative Animator",
+        desc: "Recognized for creative storytelling in animation.",
+      },
+    ],
   },
 ];
 
@@ -362,7 +667,9 @@ function renderLeaderboard() {
   leaderboardTable.innerHTML = leaderboardData
     .map(
       (designer) => `
-        <div class="leaderboard-item">
+        <div class="leaderboard-item" style="cursor:pointer" data-username="${
+          designer.name
+        }">
             <div class="rank ${
               designer.rank <= 3 ? `rank-${designer.rank}` : ""
             }">${designer.rank}</div>
@@ -380,6 +687,17 @@ function renderLeaderboard() {
     `
     )
     .join("");
+
+  // Add click event to open profile in new tab
+  leaderboardTable.querySelectorAll(".leaderboard-item").forEach((row) => {
+    row.addEventListener("click", function () {
+      const username = this.getAttribute("data-username");
+      window.open(
+        `File%20-%20profile.html?username=${encodeURIComponent(username)}`,
+        "_blank"
+      );
+    });
+  });
 }
 
 // Tab functionality for leaderboard
