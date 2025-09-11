@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design League - BWD TECH COMMUNITY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-purple: #6a1b9a;
+            --secondary-purple: #8e24aa;
+            --light-purple: #ba68c8;
+            --pale-purple: #f3e5f5;
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --card-bg: #ffffff;
+            --section-bg: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
+            color: var(--light-text);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark-text);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn:hover {
+            background-color: var(--pale-purple);
+        }
+        
+        .tab-btn.active {
+            color: var(--primary-purple);
+            border-bottom: 3px solid var(--primary-purple);
+        }
+        
+        .section {
+            display: none;
+            padding: 2rem 0;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-purple);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-purple);
+            margin: 0.5rem auto;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .rank-number {
+            background-color: var(--primary-purple);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .team-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary-purple);
+        }
+        
+        .player-names {
+            color: #666;
+        }
+        
+        .points {
+            font-weight: bold;
+            color: var(--secondary-purple);
+        }
+        
+        .match-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-left: 4px solid var(--secondary-purple);
+        }
+        
+        .team {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .vs {
+            font-weight: bold;
+            color: var(--primary-purple);
+            padding: 0 1rem;
+        }
+        
+        .match-date {
+            background-color: var(--pale-purple);
+            color: var(--primary-purple);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .live-indicator {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f44336;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-left: 1rem;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+        
+        .live-icon {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        
+        .live-link {
+            display: inline-block;
+            background-color: var(--primary-purple);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .live-link:hover {
+            background-color: var(--secondary-purple);
+        }
+        
+        .countdown {
+            font-size: 0.9rem;
+            color: #e91e63;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--primary-purple);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--light-purple);
+        }
+        
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .match-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .vs {
+                padding: 0.5rem 0;
+            }
+            
+            .match-date {
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <h1>Graphic Design League</h1>
+            <p class="subtitle">Brought to you by BWD TECH COMMUNITY</p>
+        </div>
+    </header>
+    
+    <div class="tabs">
+        <button class="tab-btn active" data-target="ranks">Designer Ranks</button>
+        <button class="tab-btn" data-target="fixtures">Match Fixtures</button>
+        <button class="tab-btn" data-target="live">Live Matches</button>
+    </div>
+    
+    <div class="container">
+        <section id="ranks" class="section active">
+            <h2 class="section-title">Designer Rankings</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="rank-number">1</div>
+                    <div class="team-name">Pixel Pioneers</div>
+                    <div class="points">982 pts</div>
+                </div>
+                <div class="player-names">Sarah Johnson & Michael Chen</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="rank-number">2</div>
+                    <div class="team-name">Vector Vikings</div>
+                    <div class="points">945 pts</div>
+                </div>
+                <div class="player-names">Emma Rodriguez & David Kim</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="rank-number">3</div>
+                    <div class="team-name">Design Dynamos</div>
+                    <div class="points">921 pts</div>
+                </div>
+                <div class="player-names">Alex Turner & Jessica Williams</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="rank-number">4</div>
+                    <div class="team-name">Creative Catalysts</div>
+                    <div class="points">899 pts</div>
+                </div>
+                <div class="player-names">Ryan Patel & Olivia Martin</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="rank-number">5</div>
+                    <div class="team-name">Layout Legends</div>
+                    <div class="points">876 pts</div>
+                </div>
+                <div class="player-names">Daniel Lee & Sophia Brown</div>
+            </div>
+        </section>
+        
+        <section id="fixtures" class="section">
+            <h2 class="section-title">Upcoming Match Fixtures</h2>
+            
+            <div class="card match-card">
+                <div class="team">
+                    <div>Pixel Pioneers</div>
+                    <div class="vs">VS</div>
+                    <div>Vector Vikings</div>
+                </div>
+                <div class="match-date">June 15, 2023 - 3:00 PM EST</div>
+            </div>
+            
+            <div class="card match-card">
+                <div class="team">
+                    <div>Design Dynamos</div>
+                    <div class="vs">VS</div>
+                    <div>Creative Catalysts</div>
+                </div>
+                <div class="match-date">June 16, 2023 - 5:00 PM EST</div>
+            </div>
+            
+            <div class="card match-card">
+                <div class="team">
+                    <div>Layout Legends</div>
+                    <div class="vs">VS</div>
+                    <div>Color Crusaders</div>
+                </div>
+                <div class="match-date">June 17, 2023 - 2:00 PM EST</div>
+            </div>
+            
+            <div class="card match-card">
+                <div class="team">
+                    <div>Type Titans</div>
+                    <div class="vs">VS</div>
+                    <div>Grid Guardians</div>
+                </div>
+                <div class="match-date">June 18, 2023 - 4:30 PM EST</div>
+            </div>
+            
+            <div class="card match-card">
+                <div class="team">
+                    <div>Visual Virtuosos</div>
+                    <div class="vs">VS</div>
+                    <div>Design Divas</div>
+                </div>
+                <div class="match-date">June 19, 2023 - 1:00 PM EST</div>
+            </div>
+        </section>
+        
+        <section id="live" class="section">
+            <h2 class="section-title">Live Matches</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="team-name">Pixel Pioneers vs Vector Vikings</div>
+                    <div class="live-indicator">
+                        <div class="live-icon"></div>
+                        LIVE
+                    </div>
+                </div>
+                <p>Watch these top-ranked teams battle it out in a logo design challenge!</p>
+                <div class="countdown">Time remaining: 42:15</div>
+                <a href="#" class="live-link">Watch Live Stream</a>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="team-name">Design Dynamos vs Creative Catalysts</div>
+                    <div class="live-indicator">
+                        <div class="live-icon"></div>
+                        LIVE
+                    </div>
+                </div>
+                <p>UI/UX design challenge in progress - creating a fitness app interface!</p>
+                <div class="countdown">Time remaining: 25:38</div>
+                <a href="#" class="live-link">Watch Live Stream</a>
+            </div>
+            
+            <h3 class="section-title">Upcoming Live Matches</h3>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="team-name">Layout Legends vs Color Crusaders</div>
+                </div>
+                <p>Next: Poster design challenge starting in:</p>
+                <div class="countdown">Starts in: 2 days, 4 hours, 32 minutes</div>
+                <a href="#" class="live-link">Set Reminder</a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <h3>BWD TECH COMMUNITY</h3>
+            <p>Bringing designers together through competition and collaboration</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2023 BWD TECH COMMUNITY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.section');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.getAttribute('data-target');
+                
+                // Update active tab
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Show active section
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === target) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+        // Simulate live countdown timers
+        function updateCountdowns() {
+            const countdowns = document.querySelectorAll('.countdown');
+            
+            countdowns.forEach(countdown => {
+                const text = countdown.textContent;
+                
+                if (text.includes('Time remaining:')) {
+                    // For live matches
+                    const timeParts = text.split(':');
+                    let minutes = parseInt(timeParts[1]);
+                    let seconds = parseInt(timeParts[2]);
+                    
+                    seconds--;
+                    
+                    if (seconds < 0) {
+                        seconds = 59;
+                        minutes--;
+                    }
+                    
+                    if (minutes >= 0) {
+                        countdown.textContent = `Time remaining: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                    } else {
+                        countdown.textContent = "Match ended";
+                    }
+                } else if (text.includes('Starts in:')) {
+                    // For upcoming matches - just simulate for demo
+                    countdown.textContent = "Starts in: 2 days, 4 hours, 31 minutes";
+                }
+            });
+        }
+        
+        // Update countdowns every second
+        setInterval(updateCountdowns, 1000);
+    </script>
+</body>
+</html>
